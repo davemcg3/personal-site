@@ -7,5 +7,5 @@ docker build -t personal-site .
 
 To run the Docker container on port 3000:
 ```bash
-docker run -d -p 3000:80 personal-site
+docker run -d -p 3030:80 personal-site
 ```
