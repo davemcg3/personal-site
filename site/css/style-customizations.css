@@ -2,20 +2,10 @@ html {
 }
 body {
   font-family: helvetica, arial, sans-serif;
+  font-size: 1.2em;
 }
 #site-wrapper {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-site {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  max-width: 95%;
 }
 
 header {
@@ -24,38 +14,50 @@ header {
   align-items: center;
 }
 
-.profile-img {
+header .profile-img {
   overflow: hidden;
   border-radius: 50%;
   display: inline-block;
   flex-shrink: 0;
-  width: 200px;
-  height: 200px;
-  margin-left: 50px;
-  margin-right: 50px
+  width: 60%;
+  height: 60%;
 }
 
-.headline-wrapper {
+header .headline-wrapper {
   display: inline-block;
   /*vertical-align: middle;*/
-  margin-left: 20px;
+  width: 100%;
+  text-align: center;
 }
 
-.headline-wrapper > a {
+header .sidebar {
+  width: 100%;
+  text-align: left;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+header .sidebar > a {
   display: block;
 }
 
-section {
-  margin: 0.5em 1em;
-  padding: 1em;
-  color: #333;
-  border-bottom: 1px solid #ccc;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
 }
 
-.disclaimer {
-  border: 1px solid #FFD700;
-  font-size: 0.9em;
-  background-color: #FFF4BD;
+section {
+  color: #333;
+  /*border-bottom: 1px solid #ccc;*/
+  padding: 1em;
+}
+
+section:first-of-type {
+  /*border-bottom: none;*/
 }
 
 h2 {
@@ -63,4 +65,78 @@ h2 {
   margin-bottom: 0em;
   padding-top: 0em;
   padding-bottom: 0em;
+  border-bottom: 1px solid grey;
+}
+
+#professional-experience {
+  /*border-bottom: 1px solid grey;*/
+}
+
+.card {
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: flex-start;*/
+  border-bottom: 1px solid grey;
+}
+
+.card h3 {
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  font-weight: bold;
+}
+
+.card h4 {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+}
+
+.card h4:first-of-type {
+  font-style: italic;
+}
+
+.card h4:last-of-type {
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+}
+
+@media only screen and (min-width: 1080px) {
+  body {
+    font-size: 1.0em;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #site-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  header {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  header .profile-img {
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+    margin-right: 50px
+  }
+
+  header .headline-wrapper {
+    /*vertical-align: middle;*/
+    margin-left: 20px;
+  }
+
+  section {
+    margin: 0.5em 1em;
+  }
 }
