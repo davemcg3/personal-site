@@ -53,7 +53,7 @@ main {
 section {
   color: #333;
   /*border-bottom: 1px solid #ccc;*/
-  padding: 1em;
+  padding: 0 1em;
 }
 
 section:first-of-type {
@@ -120,6 +120,7 @@ h2 {
   }
 
   header {
+    max-width: 30%;
     margin-left: 1em;
     margin-right: 1em;
   }
@@ -134,10 +135,15 @@ h2 {
   header .headline-wrapper {
     /*vertical-align: middle;*/
     margin-left: 20px;
+    
   }
 
   section {
     margin: 0.5em 1em;
+  }
+
+  section.sidebar {
+    margin-top: -0.5em;
   }
 }
 
