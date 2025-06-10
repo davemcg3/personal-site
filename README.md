@@ -14,5 +14,5 @@ docker run -p 80:80 -v "$(pwd)/site:/usr/share/nginx/html" --name personal-site 
 Production:
 To run the Docker container on port 3030:
 ```bash
-docker run -d -p 3030:80 personal-site
+docker run -d -p 3030:80 --name personal-site personal-site
 ```
