@@ -6,7 +6,7 @@ docker build -t personal-site .
 ```
 
 Development:
-To run the Docker container on port 3030:
+To run the Docker container on port 80:
 ```bash
 docker run -p 80:80 -v "$(pwd)/site:/usr/share/nginx/html" --name personal-site personal-site
 ```
